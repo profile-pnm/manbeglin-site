@@ -1,0 +1,234 @@
+@font-face { 
+    font-family: "FuturaRoundBold";
+    src: url("../fonts/FuturaRoundBold/FuturaRoundBold.eot");
+    src: url("../fonts/FuturaRoundBold/FuturaRoundBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/FuturaRoundBold/FuturaRoundBold.woff") format("woff"),
+    url("../fonts/FuturaRoundBold/FuturaRoundBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+	background: #71f7f7;
+}
+
+.container {
+	background: white;
+	width: 400px;
+	height: 500px;
+	box-shadow: gray 0px 0px 14px -5px;
+	border-radius: 10px;
+}
+
+.login-center {
+	width: 400px;
+	height: 500px;
+	background: white;
+	float: center;
+	border-radius: 10px;
+}
+
+#head {
+	background: #30b2f9;
+	color: white;
+	font-family: FuturaRoundBold;
+	font-size: 30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#text-head {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+.place-form {
+	margin: 20px 0 0 0;
+    box-sizing: border-box;
+    width: 320px;
+}
+#place-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#place-container input {
+    background-color: #FFF;
+    border: 2px solid #30b2f9;
+    box-sizing: border-box;
+    color: black;
+    font-size: 16px;
+    font-family: FuturaRoundBold;
+    line-height: 16px; 
+    height: 50px;
+    outline: 0;
+    padding: 0 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+#place-container label {
+    color: black;
+    font-family: FuturaRoundBold;  
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 10px;
+    position: absolute;
+    transition: all 200ms;
+    top: 12px;
+    left: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+#place-container input:focus + label,
+#place-container input:not(:placeholder-shown) + label{
+    top: -10px;
+    left: 10px;
+    font-size: 11px;
+    background-color: #30b2f9;
+    padding: 2px 10px;
+    color: white;
+}
+
+
+#sign-in {
+	background: #30b2f9;
+	color: white;
+	border-radius: 10px;
+	margin: 5px 150px 0 150px;
+	font-family: FuturaRoundBold;
+	font-size: 20px;
+	padding: 10px;
+	display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+#sign-in:hover,
+#sign-in:active,
+#sign-in:focus {
+    color: white;
+}
+#sign-in:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+#sign-in:hover:before,
+#sign-in:active:before,
+#sign-in:focus:before {
+    transform: translateX(0);
+}
+
+
+#question {
+	color: black;
+	margin-top: 140px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-family: FuturaRoundBold;
+}
+
+#sign-up-button {
+	color: white;
+	margin-top: 10px;
+	padding-left: 90px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	font-family: FuturaRoundBold;
+	background: #30b2f9;
+	display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    width: 300px;
+}
+#sign-up-button:hover,
+#sign-up-button:active,
+#sign-up-button:focus {
+    color: white;
+}
+#sign-up-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+#sign-up-button:hover:before,
+#sign-up-button:active:before,
+#sign-up-button:focus:before {
+    transform: translateX(0);
+}
+
+
+
+#main-button {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: FuturaRoundBold;
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+#main-button:hover,
+#main-button:active,
+#main-button:focus {
+    color: white;
+}
+#main-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+#main-button:hover:before,
+#main-button:active:before,
+#main-button:focus:before {
+    transform: translateX(0);
+}
+
+
+
+
+

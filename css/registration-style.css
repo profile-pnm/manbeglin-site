@@ -1,0 +1,179 @@
+@font-face { 
+    font-family: "FuturaRoundBold";
+    src: url("../fonts/FuturaRoundBold/FuturaRoundBold.eot");
+    src: url("../fonts/FuturaRoundBold/FuturaRoundBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/FuturaRoundBold/FuturaRoundBold.woff") format("woff"),
+    url("../fonts/FuturaRoundBold/FuturaRoundBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+	background: #71f7f7;
+}
+
+.container {
+	background: white;
+	width: 400px;
+	height: 300px;
+	box-shadow: gray 0px 0px 14px -5px;
+	border-radius: 10px;
+}
+
+.reg-center {
+	width: 400px;
+	height: 300px;
+	background: white;
+	float: center;
+	border-radius: 10px;
+}
+
+#head {
+	background: #30affb;
+	color: white;
+	font-family: FuturaRoundBold;
+	font-size: 30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#text-head {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+.place-form {
+	margin: 20px 0 0 0;
+    box-sizing: border-box;
+    width: 320px;
+}
+#place-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#place-container input {
+    background-color: #FFF;
+    border: 2px solid #30affb;
+    box-sizing: border-box;
+    color: black;
+    font-size: 16px;
+    font-family: FuturaRoundBold;
+    line-height: 16px; 
+    height: 50px;
+    outline: 0;
+    padding: 0 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+#place-container label {
+    color: black;
+    font-family: FuturaRoundBold;  
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px 10px;
+    position: absolute;
+    transition: all 200ms;
+    top: 12px;
+    left: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+#place-container input:focus + label,
+#place-container input:not(:placeholder-shown) + label{
+    top: -10px;
+    left: 10px;
+    font-size: 11px;
+    background-color: #30b2f9;
+    padding: 2px 10px;
+    color: white;
+}
+
+
+#reg-button {
+	background: #30affb;
+	color: white;
+	border-radius: 10px;
+	font-family: FuturaRoundBold;
+	font-size: 25px;
+	padding: 10px;
+	margin-top: 8px;
+	display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+#reg-button:hover,
+#reg-button:active,
+#reg-button:focus {
+color: #08FFF9;
+}
+#reg-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+#reg-button:hover:before,
+#reg-button:active:before,
+#reg-button:focus:before {
+    transform: translateX(0);
+}
+
+
+#main-button {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: FuturaRoundBold;
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+#main-button:hover,
+#main-button:active,
+#main-button:focus {
+    color: white;
+}
+#main-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+#main-button:hover:before,
+#main-button:active:before,
+#main-button:focus:before {
+    transform: translateX(0);
+}
+
+
+
+
+
