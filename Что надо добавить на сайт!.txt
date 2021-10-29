@@ -1,0 +1,13 @@
+Что стоит добавить/изменить на сайте:
+
+(Next and Prev) Кнопки переходов на след. страницы документаций слева сверху и слева снизу
+
+(tables) Применить где-нибудь таблицу https://html5book.ru/krasivoe-oformlenie-tablic/
+
+(images-effect) Добавить эффект для изображений https://html5book.ru/dizayn-kartochek-tovara/
+
+На чем остановился?
+> На странице "Установка ArtixLinux" (описывание установки)
+
+
+
