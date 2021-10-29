@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+	
+	
+     <head>
+	 	<title> Об установке </title>
+	 	<base href=".">
+	 	<meta charset = "UTF-8"/>
+     	<link rel = "stylesheet" type = "text/css" href = "../css/installOS.css"/>
+     	<link href="../img/glider.ico" rel="icon" type="image/x-icon" />
+
+     </head>
+
+
+		<body>
+			<center> <div class = "container"> 
+				<header>
+						
+						<a href = "page-login.html" id = "button"> 
+						Войти </a>
+									
+					<div id = "header-banner">
+						<a href = "../main.html"> <img id = "logo" src="../img/logo-website.png"> </a>
+						<p id = "text-header"> Руководство для начинающиего 
+							<span style = "color: red; font-size: 25px;"> 
+							Линуксоида</span><span style = "color: #428bca; 
+							font-size: 20px">.org</span>  
+						</p>
+					</div>
+				</header>
+				
+				<a href = "gnulinux.html" id = "button-prev"> Вернуться </a>
+				
+
+				<div class = "content">
+					<h3 id = "content-header">
+							Об установке GNU/Linux 
+					</h3>
+					
+					
+					<p id = "paragraph-head"> Введение </p>
+					<hr style = "margin-left: 30px; margin-right: 40px;">
+					<p id = "content-text"> 
+							<img src="../img/install-distro.png"style = "width: 30%;
+								  margin: 10px 13px 0 10px; float: left">
+						Если рассматривать тему установки операционной системы на базе ядра Linux. То стоит сказать, что этот процесс в каждом 
+						<a class = "tooltip"> дистрибутиве <span class = "tooltiptext"> это форма распространения ОС (в нашем случае на базе Linux)  </span></a>
+						может происходить по-разному. В каких-то дистрах тебе достаточно запустить на флешке установочный <a class = "tooltip"> iso <span class = "tooltiptext">
+						 термин для обозначения образа оптического диска, содержащего файловую систему стандарта ISO 9660 </span> </a> и там пройтись по-графическому 
+						мастеру установки. А где-то, перед установкой, надо прочитать <a class = "tooltip"> мануал <span class = "tooltiptext"> документ, назначение 
+						которого предоставить людям помощь в использовании какой-то системы </span></a>, понять что есть что и потом уже приступать к установке. Не стоит
+						этого пугаться, поскольку в интернете полно разных документаций и видео. Особенно везет популярным дистрам, у которых огромное сообщество. 
+					</p>	
+						</br>
+					<p id = "paragraph-head"> Рассмотрим по-подробнее разные виды установки </p>
+					<hr style = "margin-left: 30px; margin-right: 43px;">
+					
+						<p id = "content-text"> 
+						<b> 1. </b> Графическая установка дистрибутива: </br>
+						Отличается тем, что все происходит полностью через графический интерфейс. Является самой привлекательной.
+						
+							</br>
+							</br>
+							<img src="../img/install-arch-picta.png"style = "width: 32%;
+								  margin: 35px 75px 0 15px; float: right; border-radius: 10px;
+								  box-shadow: 0px 1px 6px -1px;">
+							</br>
+							</br>
+						</p>
+						<p id = "content-text-preimus">
+						<b> Преимущества: </b> </p>
+							<ul id = "content-text">
+								<li> быстрый процесс инсталляции на современном железе </li>
+								<li> простая для рядового пользователя </li>
+								<li> возможность использования курсора мыши </li>
+								<li> красивый интерфейс </li>
+							</ul>
+						
+						<p id = "content-text-nedo">
+						<b> Недостатки: </b> </p>
+							<ul id = "content-text">
+								<li> возможно долгая установка на слабом железе </li>
+								<li> не гибкая </li>
+								<li> устанавливается лишний софт </li>
+							</ul>
+							
+						</br>
+						</br>
+						
+						<p id = "content-text">
+						<b> 2. </b> Интерактивная установка дистрибутива: </br>
+						Такой случай можно назвать псевдо-графическим, потому-что есть некоторые визуальные элементы, по-которым не трудно ориентироваться. 
+					
+							</br>
+							</br>
+							<img src="../img/install-debian-picta.png"style = "width: 32%;
+								  margin: 10px 75px 0 15px; float: right; 
+								  box-shadow: 0px 1px 8px -1px; border-radius: 10px;">
+							</br>
+							</br>
+						
+						</p>
+						
+						<p id = "content-text-preimus">
+						<b> Преимущества: </b> </p>
+							<ul id = "content-text">
+								<li> быстрый процесс инсталляции на любом железе </li>
+								<li> простая установка для рядового пользователя </li>
+							</ul>
+						
+						<p id = "content-text-nedo">	
+						<b> Недостатки: </b> </p>
+							<ul id = "content-text">
+								<li> не самый красивый интерфейс </li>
+								<li> не гибкая </li>
+								<li> устанавливается необходимый софт </li>
+							</ul>
+						</br>
+						</br>
+						
+						<p id = "content-text">
+						<b> 3. </b> Консольная установка дистрибутива: </br>
+						Одна из самых старых и популярных методов среди ветеранов GNU/Linux. Установка очень интересная и дает массу эмоций.
+						
+							</br>
+							</br>
+							<img src="../img/CLI-installation.png"style = "width: 38%;
+								  margin: -15px 50px 0 15px; float: right; 
+								  box-shadow: 0px 1px 8px -1px; border-radius: 10px;">
+							</br>
+							</br>
+						</p>
+						
+						<p id = "content-text-preimus">	
+						<b> Преимущества: </b> </p>
+							<ul id = "content-text">
+								<li> очень гибко </li>
+								<li> устанавливаешь тот софт, который тебе нужен </li>
+								<li> не требовательная установка на любом железе </li>
+							</ul> 
+						
+						<p id = "content-text-nedo">	
+						<b> Недостатки: </b> </p>
+							<ul id = "content-text">
+								<li> сложно новичкам </li>
+								<li> отсутствует графический интерфейс </li>
+							</ul>
+					
+						</br>						
+						</br>
+
+					<p id = "paragraph-head"> Какие бывают дистрибутивы? </p>
+					<hr style = "margin-left: 30px; margin-right: 50px;">	
+						<p id = "content-text"> 
+						
+							Дистрибутивов в цифровом мире полным полно, миллионы и миллиарды. Одни созданы огромной корпорацией, 
+							другие маленькими проектами или обычными пользователями. Каждая привлекательнее другой. Есть с графической 
+							средой <a class = "tooltip"> (DE) <span class = "tooltiptext"> desktop environment - окружение, в котором есть 
+							уже все необходимое </span> </a> или <a class = "tooltip"> (WM) <span class = "tooltiptext"> window manager - 
+							оконное окружение, которое является базой управления размещением и определяющая внешний вид окон </span> </a>. 
+							А также без нее (CLI). Любую из них можно настроить как угодно и для разных задач, 
+							если уметь правильно это делать. В таком разнообразии можно найти и то, что тебе больше всего подойдет, с 
+							помощью сайтов с фильтрами. Одним из таких можно считать <a style = "color: #30b2f9; 
+							text-decoration: none" href = "https://distrowatch.com"> DistroWatch.com </a>
+						
+						</p>	
+					
+					</p>
+					
+					
+				</div>
+				
+						
+				<div class = "clear"> </div>
+				
+						
+				<footer >  
+					<div style = "padding: 5px">
+						
+						<div id = "left-bottom-hyper">
+						<a href = "https://www.notabug.org/ZeroNe/MPKB">
+							<img id = "pict-notabug2"
+								 src = "../img/notabug-logo.png"> 
+						</a>
+						<a href = "mailto:nik.pavlov.9191@inbox.ru">
+							<img id = "pict-mail2"
+								src = "../img/mail-logo.png">
+							</a>
+						</div>
+							
+						<p style = "font-family: FuturaRoundBold;
+									font-size: 12px;
+									margin: 4px 430px 0 430px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									border-radius: 15px; "> 
+						Автор сайта: Павлов Никита из гр. ИСП-932</p>
+						
+						
+						<p style = "font-family:FuturaRoundBold;
+									font-size: 12px;
+									margin: -23px 35px 0 980px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									color: #428bca;
+									border-radius: 15px; ">
+						Версия сайта: 0.4 </p>
+					
+					</div>
+				</footer>
+					
+					
+			</div> </center> 
+     			
+     			
+		</body>
+		
+		
+</html>
+

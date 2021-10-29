@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+	
+	
+     <head>
+	 	<title> Графическое окржение </title>
+	 	<base href=".">
+	 	<meta charset = "UTF-8"/>
+     	<link rel = "stylesheet" type = "text/css" href = "../css/graph-shell.css"/>
+     	<link href="../img/glider.ico" rel="icon" type="image/x-icon" />
+
+     </head>
+
+
+		<body>
+			<center> <div class = "container"> 
+				<header>
+						
+						<a href = "page-login.html" id = "button"> 
+						Войти </a>
+					
+					<div id = "header-banner">
+						<a href = "../main.html"> <img id = "logo" src="../img/logo-website.png"> </a>
+						<p id = "text-header"> Руководство для начинающиего 
+							<span style = "color: red; font-size: 25px;"> 
+							Линуксоида</span><span style = "color: #428bca; 
+							font-size: 20px">.org</span>  <!-- #08FF28 -->
+						</p>
+					</div>
+				</header>
+
+				<a href = "../main.html" id = "button-prev"> Вернуться </a>
+				
+
+				<div class = "content">
+					<h3 id = "content-header">
+							Графическое окружение
+					</h3>
+					<br> 
+                    <h3 id = "paragraph-head"> Как устроена графика в GNU/Linux?</h3>
+
+                    <p id="content-text">
+                        Данная тема очень сильно интересует продвинутых
+                        пользователей в GNU/Linux и почему же? А потому что это очень 
+                        обширная и необычная тема для разговора. <br>
+                        Итак начнем! <br> <br>
+                        Выделяем три основных компонента и я перечислю их в порядке, как
+                        они запускаются при старте системы: <br> <br>
+                        1. <i>DM (Display Manager)</i> <br>
+                        2. <i>Display Server</i> <br>
+                        3. <i>DE (Desktop Environment)</i> <br> <br>
+                        Дополнительно в качестве подпунктов у Desktop Environment: <br>
+                        * Apps Manager/Launcher/Switcher *<br>
+                        * WM (Window Manager) *<br>
+                        * различное ПО, поставляемое вместе со средой рабочего стола *<br> <br>
+                        Теперь подробно по каждому пункту... <br> <br>
+                        
+                       
+                        <h4 id="content-text" style = "text-align: center">
+                            DM (Display Manager)
+                        </h4> 
+                            <p id="content-text">
+                                Это первое приложение, которое запускается при старте <графики>.
+                                По-русски оконный менеджер. Его основные задачи: <br>
+                                - спросить, каких пользователей пустить в систему, запросить аутентификационные
+                                данные (пароль, отпечаток пальца); <br>
+                                - выбрать, какую среду оформления рабочего стола запустить. <br> <br>
+                                На текущий момент в различных дистрибутивах широко используются: <br>
+                               
+                                * SDDM *<br>
+                                <img src="../img/sddm.png" style="width: 50%;
+                                height: 30%; margin: 14px 13px 0 15px; 
+                                float: left; border-radius: 5px; border: 2px solid gray"> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                               
+                                * LightDM *<br>
+                                <img src="../img/lightdm.png" style="width: 50%;
+                                height: 30%; margin: 14px 13px 0 15px; 
+                                float: left; border-radius: 5px; border: 2px solid gray"> <br> <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+                              
+                                Главное, чтобы было понятно, что есть такое приложение,
+                                которое отвечает за запуск графики и допуск пользователя к этой графике, и 
+                                есть разные реализации этого приложения, различающиеся внешним видом и немного
+                                функционалом.
+                            </p> <br>
+                        
+                            <h4 id="content-text" style = "text-align: center">
+                                Display Server
+                            </h4> 
+                            <p id="content-text">
+                                Это некий фундамент графики, основная задача которого - работать с видеокартой,
+                                монитором и с различными устройствами ввода (клавиатура, мышь, тачпады). То есть
+                                приложению (например, браузер или текстовый редактор), которое отрисовывается в
+                                графике, не нужно знать, как напрямую работать с устройствами, не нужно знать про 
+                                драйверы. Это все на себя берет <i>X Window</i>. <br>
+                                <center>
+                                    <img src="../img/xorg.png" style="width: 40%;
+                                    height: 30%; margin: 14px 13px 0 15px; 
+                                    border-radius: 10px; border: 2px solid gray"> <br> <br> 
+                                </center>
+                                    <p id="content-text">
+                                        Когда говориться про Display Server, то много лет в GNU/Linux, да и в Unix имелось
+                                        в виду приложение X Window System или в простонароде иксы. 
+                                        Сейчас во многих дистрибутивах внедряют Wayland.
+                                    </p>
+                            </p>
+
+                            <h4 id="content-text" style = "text-align: center">
+                                Компоненты DE
+                            </h4> 
+                            <p id="content-text">
+                                По факту DE это уже законченная графическая оболочка, с множеством различных
+                                плюшек, из которых собственно и состоит рабочий стол. <br>
+                                Значит пройдемся быстро по этим компонентам: <br>
+                                * кнопки пуск *<br>
+                                * докеры *<br>
+                                * службы, которые запускают приложения при нажатии горячих клавиш *<br>
+                                * меню-образные лаунчеры *<br>
+                                <center>
+                                    <img src="../img/de.png" style="width: 40%;
+                                    height: 30%; margin: 14px 13px 0 15px; 
+                                    border-radius: 10px; border: 2px solid gray"> <br> <br> 
+                                </center>
+                            </p>
+
+                            <h4 id="content-text" style = "text-align: center">
+                                Оконный менеджер
+                            </h4> 
+                            <p id="content-text">
+                                Это некое приложение, которое отвечает за управление окнами. Она добавляет
+                                возможность: <br>
+                                - перемещать окна по рабочему столу <br>
+                                - изменять размеры окон <br>
+                                - добавлять к интерфейсу окна заголовки и прочие элементы <br>
+                                - понятие, какое приложение находится в фокусе <br>
+                                <center>
+                                    <img src="../img/wm.png" style="width: 40%;
+                                    height: 30%; margin: 14px 13px 0 15px; 
+                                    border-radius: 10px; border: 2px solid gray"> <br> <br> 
+                                </center>
+                            </p>
+                            <p id="content-text" style="text-align: center">
+                                Вот мы и рассмотрели основные понятие о графической среде. А подробнее вы можете
+                                узнать в интернете!
+                            </p>
+                    </p>
+					
+                    
+				</div>
+				
+						
+				<div class = "clear"> </div>
+				
+						
+				<footer >  
+					<div style = "padding: 5px">
+						
+						<div id = "left-bottom-hyper">
+						<a href = "https://www.notabug.org/ZeroNe/MPKB">
+							<img id = "pict-notabug2"
+								 src = "../img/notabug-logo.png"> 
+						</a>
+						<a href = "mailto:nik.pavlov.9191@inbox.ru">
+							<img id = "pict-mail2"
+								src = "../img/mail-logo.png">
+							</a>
+						</div>
+							
+						<p style = "font-family: FuturaRoundBold;
+									font-size: 12px;
+									margin: 4px 430px 0 430px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									border-radius: 15px; "> 
+						Автор сайта: Павлов Никита из гр. ИСП-932</p>
+						<p style = "font-family:FuturaRoundBold;
+									font-size: 12px;
+									margin: -23px 35px 0 980px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									color: #428bca;
+									border-radius: 15px; ">
+						Версия сайта: 0.4 </p>
+					</div>
+				</footer>
+					
+					
+			</div> </center> 
+     			
+     			
+		</body>
+		
+		
+</html>
+

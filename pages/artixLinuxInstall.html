@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<title> ArtixLinux </title>
+	<base href=".">
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../css/artixLinuxInstall.css" />
+	<link href="../img/glider.ico" rel="icon" type="image/x-icon" />
+
+</head>
+
+
+<body>
+	<center>
+		<div class="container">
+			<header>
+
+				<a href="page-login.html" id="button">
+					Войти </a>
+
+				<div id="header-banner">
+					<a href="../main.html"> <img id="logo" src="../img/logo-website.png"> </a>
+					<p id="text-header"> Руководство для начинающиего
+						<span style="color: red; font-size: 25px;">
+							Линуксоида</span><span style="color: #428bca; 
+							font-size: 20px">.org</span>
+					</p>
+				</div>
+			</header>
+
+			<a href="gnulinux.html" id="button-prev"> Вернуться </a>
+
+
+			<div class="content">
+				<h3 id="content-header">
+					Установка ArtixLinux
+				</h3>
+
+
+				<p id="paragraph-head"> Введение </p>
+				<hr style="margin-left: 30px; margin-right: 40px;">
+				<p id="content-text">
+					<img src="../img/Artix-logo.png" style="width: 17%;
+								  margin: 10px 25px 0 10px; float: left">
+
+					ArtixLinux это дистрибутив, который основан на другом дистрибутиве ArchLinux. Про который уже есть
+					<a href="archlinuxInstall.html" style="color: #30b2f9; text-decoration: none"> статья </a>
+					на этом сайте. Так же как и в Арче здесь используется модель обновлений <a class="tooltip">
+						rolling-release
+						<span class="tooltiptext"> система плавающих выпусков позволяет пользователю всегда иметь
+							последние версии устанавливаемых программ. </span> </a> и
+					используется пакетный менеджер <a class="tooltip"> pacman <span class="tooltiptext"> система
+							управления пакетами
+							в Arch Linux и основанных на нём дистрибутивах GNU/Linux </span> </a>. Принципиальное
+					отличие лишь в том, что у Артикса есть свои
+					собственные репозитории, которые чем-то схожи с теми, что есть у Арча, но к сожалению они не на
+					столько
+					большие как у своего родителя. Также у Artix совершенно другая система <a class="tooltip">
+						инициализации <span class="tooltiptext">
+							init система, которая запускает все остальные процессы </span> </a> . В данном случае можно
+					выбрать три из предложенных:
+					<a href="https://ru.wikipedia.org/wiki/Runit" style="color: #30b2f9; text-decoration: none">
+						runit </a>, <a href="https://ru.wikipedia.org/wiki/OpenRC"
+						style="color: #30b2f9; text-decoration: none"> OpenRC </a>,
+					s6. Почему это является важной особенностью? Потому-что init-система “systemd”, которая используется
+					в ArchLinux как родная,
+					наполнена множеством уязвимостей и недостатков, о которых можно узнать по данной <a
+						href="https://nosystemd.org" style="color: #30b2f9; text-decoration: none"> ссылке </a>. Поэтому
+					и был создан этот дистрибутив, как замена Арчу.
+
+
+				</p>
+				</br>
+				<p id="paragraph-head"> Небольшая история </p>
+				<hr style="margin-left: 30px; margin-right: 2px;">
+				<p id="content-text">
+
+					В 2012 г. появился проект Arch OpenRC по созданию версии Arch Linux с системой инициализации OpenRC
+					вместо systemd.
+					Позднее появился еще один проект — *Manjaro OpenRC, который создавал образ дистрибутива Manjaro
+					Linux без systemd.
+					В 2017 г. на базе этих двух проектов было принято решение создать дистрибутив Artix Linux. Создатели
+					дистрибутива
+					не объясняют точную расшифровку названия «Artix», но в качестве слогана на сайте дистрибутива
+					используется выражение *«The Art of Linux»
+
+					</br>
+				<p id="paragraph-head"> Редакции </p>
+				<hr style="margin-left: 30px; margin-right: 3px;">
+				<p id="content-text">
+
+					Для установки дистрибутива Доступно 3 вида образов:
+				<ul id="content-text">
+					<li> Base — базовый образ для опытных пользователей. Устанавливается через консольный интерфейс.
+					</li>
+					<li> Graphical — образы с предустановленной средой рабочего стола. Устанавливаются в графическом
+						режиме. </li>
+					<li> Community — образы, создаваемые отдельными разработчиками Artix. Доступно 2 версии:
+						community-gtk со средой
+						*MATE и community-qt со средой *KDE Plasma. Устанавливаются с готовым набором программ.
+						В качестве
+						альтернативных окружений также можно установить *LXDE и *LXQt. </li>
+				</ul>
+				<p id="content-text">
+					Образы системы подготовлены для каждой из поддерживаемых систем инициализации и отличаются
+					предустановленной средой рабочего стола.
+					Образы с графическим окружением (Graphical) доступны в следующих версиях:
+				<ul id="content-text">
+					<li> Cinnamon </li>
+					<li> LXDE </li>
+					<li> Mate </li>
+					<li> KDE Plasma </li>
+					<li> Xfce </li>
+				</ul>
+				</p>
+
+				</p>
+				</br>
+				<p id="paragraph-head"> Установка </p>
+				<hr style="margin-left: 30px; margin-right: 33px;">
+				<p id="content-text">
+					Поскольку установка дистрибутива в графическом режиме
+					не требует особых навыков, то рекомендуется использовать ее,
+					если вы еще новичок и плохо понимаете, как работает ОС на базе Linux.
+					Но если вы уже немного разбираетесь, то вам подойдет это маленькое
+					руководство с командами, для установки Artix Linux с редакцией Base
+					в консольном окружении. Обязательно запаситесь кофе (чаем) с печеньками! :)
+				</p>
+
+				</br>
+				<p id="content-text">
+					Мы будем рассматривать консольный процесс установки дистрибутива ArtixLinux Base
+					с системой инициализации runit. Для начала перейдем на официальный сайт ОС и зайдем на
+					<a href="https://artixlinux.org/download.php" style="color: #30b2f9; text-decoration: none">
+						страницу </a> загрузки.
+
+				<p id="content-text" style="text-align: center">
+					Найдем образ <i> artix-base-runit-/дата/-x86_64.iso </i> и скачаем его.
+				</p> </br>
+
+				<center> <img src="../img/screen-download.png" style="width: 80%;
+												 margin: -30px 0 10px 0; border-radius: 10px; box-shadow: 0px 1px 8px -1px;"> </center>
+				</p>
+
+
+				<p id="content-text">
+					Следующим этапом сделаем загрузочную флешку. О том как создать загрузочную флешку вы можете узнать
+					из этой <a href="..." style="color: #30b2f9; text-decoration: none"> статьи</a>. </br>
+					Запускаем готовую флешку с системой на PC и выбираем ее для загрузки системы. После ждем того
+					момента, когда появится поле
+					приглашения и собственно переходим к основной установке: </br></br>
+					1) Делаем разметку диска: </br>
+					<span style = "color: red">#</span> <b>cfdisk</b> </br> 
+					* /dev/sdXx Linux Swap '8G' </br> 
+					* /dev/sdXx root 'все оставшееся место'
+				</p>
+				
+				<p id="content-text">
+					2) Форматируем разделы: </br>
+					<span style = "color: red">#</span> <b>mkfs.ext4 -L ROOT /dev/sdXx</b>
+				</p>
+
+				<p id="content-text">
+					3) Монтируем разделы: <br>
+					<span style = "color: red">#</span> <b>swapon /dev/disk/by-label/SWAP</b> <br>
+					<span style = "color: red">#</span> <b>mount /dev/disk/by-label/ROOT /mnt</b> <br>
+					<span style = "color: red">#</span> <b>mkdir</b> <br>
+					<span style = "color: red">#</span> <b>mount/dev/disk/by-label/BOOT /mnt/boot</b> <br>
+				</p>
+
+				<p id="content-text">
+					4) Подключение к wifi
+					<span style = "color: red">#</span> <b>rfkill unblock wifi</b> <br>
+					* убедимся в том, что подключены сервисы <i>dhcpcd</i> и <i>wpa_supplicant</i> <br>
+					* произвести подключение можно с помощью <i>connmanctl</i> <br>
+					<span style = "color: red">#</span> <b>connmanctl</b> <br>
+					<span style = "color: #77ec34"> > </span>scan wifi<br>
+					<span style = "color: #77ec34"> > </span>agent on<br>
+					<span style = "color: #77ec34"> > </span>service's<br>
+					<span style = "color: #77ec34"> > </span>connect ...<br>
+					<span style = "color: #77ec34"> > </span>quit<br>					
+				</p>
+
+				<p id="content-text">
+					5) Проверить на ping <br>
+					<span style = "color: red">#</span> <b>ping 8.8.8.8</b>
+				</p>
+
+				<p id="content-text">
+					6) Установка основной системы и некоторых компонентов <br>
+					<span style = "color: red">#</span> <b>basestrap /mnt base base-devel runit elogind-runit linux linux-firmware</b>
+				</p>
+
+				<p id="content-text">
+					7) Генерация fstab <br>
+					<span style = "color: red">#</span> <b>fstabgen -U /mnt >> /mnt/etc/fstab</b>
+				</p>
+
+				<p id="content-text">
+					8) Переходим в нашу готовую систему:
+					<span style = "color: red">#</span> <b>artix-chroot /mnt</b>
+				</p>
+				
+				<p id="content-text">
+					9) Установка GRUB
+					<span style = "color: red">#</span> <b>pacman -S grub os-prober</b> <br>
+					<span style = "color: red">#</span> <b>grub-install</b> <br>
+					<span style = "color: red">#</span> <b>grub-mkconfig -o /boot/grub/grub.cfg</b>
+				</p>
+
+				<p id="content-text">
+					9.1) Если имеется вторая система на другом диске
+					<span style = "color: red">#</span> <b>sudo vim /etc/grub.d/40_custom</b> <br>
+					* вписать следующиее:
+					<p id="content-text" style="margin: -10px 0 0 50px">
+						menuentry "Windows" { <br>
+							insmod part_msdos <br>
+							insmod ntfs <br>
+							set root='(этот путь узнать из grub console. Это может быть hd0,msdos0' <br>
+							chainloader +1 <br>
+						}
+					</p>
+				</p>
+				<p id="content-text">
+					<span style = "color: red">#</span> <b>sudo vim /etc/default/grub вписать следующее</b> <br>
+						GRUB_DISABLE_OS_PROBER=false <br>	
+					<p id="content-text">				
+						<span style = "color: red">#</span> <b>update grub</b> <br>
+					</p>
+				</p>
+
+				<p id="content-text">
+					10) Настройка пользователей <br>
+					<span style = "color: red">#</span> <b>passwd</b> <br>
+					<span style = "color: red">#</span> <b>useradd -m user</b> <br>
+					<span style = "color: red">#</span> <b>passwd user</b> <br>
+				</p>
+
+				<p id="content-text">
+					11) Имя хоста <br>
+					<span style = "color: red">#</span> <b>vim /etc/hostname</b> <br>
+					* ввести <i>myhostname</i> <br>
+					<span style = "color: red">#</span> <b>vim /etc/hosts</b> <br>
+					* ввести <i> 
+						127.0.1.1	localhost </i> <br>
+				</p>
+
+				<p id="content-text">
+					12) Скачать программы для настройки сети и запустить сервис <br>
+					<span style = "color: red">#</span> <b>pacman -S dhcpcd wpa_supplicant connman-runit</b> <br>
+					<span style = "color: red">#</span> <b>ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default</b> <br>					
+				</p>
+
+				<p id="content-text">
+					13) Дата и локаль <br>
+					<span style = "color: red">#</span> <b>ln -sf /usr/share/zoneinfo/Region/Ciry /etc/localtime</b> <br>
+					<span style = "color: red">#</span> <b>hwclock --systohc</b> <br>
+					<span style = "color: red">#</span> <b>locale-gen</b> <br>
+					<span style = "color: red">#</span> <b>vim /etc/locale.conf</b> <br>
+					* вписать <i>LANG="en_US.UTF-8"</i>
+				</p>
+
+				<p id="content-text">
+					14) Перезагрузка системы <br>
+					<span style = "color: red">#</span> <b>exit</b> <br>
+					<span style = "color: red">#</span> <b>umount -R /mnt</b> <br>
+					<span style = "color: red">#</span> <b>reboot</b> <br>
+				</p>
+			</div>
+
+
+			<div class="clear"> </div>
+
+
+			<footer>
+				<div style="padding: 5px">
+
+					<div id="left-bottom-hyper">
+						<a href="https://www.notabug.org/ZeroNe/MPKB">
+							<img id="pict-notabug2" src="../img/notabug-logo.png">
+						</a>
+						<a href="mailto:nik.pavlov.9191@inbox.ru">
+							<img id="pict-mail2" src="../img/mail-logo.png">
+						</a>
+					</div>
+
+					<p style="font-family: FuturaRoundBold;
+									font-size: 12px;
+									margin: 4px 430px 0 430px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									border-radius: 15px; ">
+						Автор сайта: Павлов Никита из гр. ИСП-932</p>
+					<p style="font-family:FuturaRoundBold;
+									font-size: 12px;
+									margin: -23px 35px 0 980px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									color: #428bca;
+									border-radius: 15px; ">
+						Версия сайта: 0.4 </p>
+				</div>
+			</footer>
+
+
+		</div>
+	</center>
+
+
+</body>
+
+
+</html>

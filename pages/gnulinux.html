@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+	
+	
+     <head>
+	 	<title> Почему GNU/Linux? </title>
+	 	<base href=".">
+	 	<meta charset = "UTF-8"/>
+     	<link rel = "stylesheet" type = "text/css" href = "../css/gnulinux.css"/>
+     	<link href="../img/glider.ico" rel="icon" type="image/x-icon" />
+
+     </head>
+
+
+		<body>
+			<center> <div class = "container"> 
+				<header>	
+						<a href = "page-login.html" id = "button"> 
+						Войти </a>
+					
+					<div id = "header-banner">
+						<a href = "../main.html"> <img id = "logo" src="../img/logo-website.png"> </a>
+						<p id = "text-header"> Руководство для начинающиего 
+							<span style = "color: red; font-size: 25px;"> 
+							Линуксоида</span><span style = "color: #428bca; 
+							font-size: 20px">.org</span>  <!-- #08FF28 -->
+						</p>
+					</div>
+				</header>
+				
+				
+				<div class = "sidebar">
+					<b> <p id = "sidebar-text-head"> Содержание </p> </b>					
+						<ul class = "lists" style = "margin-top: 0px; margin-bottom: 0px; padding-left: 0px"> 
+							<li> <a style = "text-decoration: none" href = "installOS.html"> Об установке </a> </li>
+							<li> <a style = "text-decoration: none" href = "artixLinuxInstall.html"> ArtixLinux </a> </li>
+							<li> <a style = "text-decoration: none" href = "archLinuxInstall.html"> ArchLinux </a> </li>
+							<li> <a style = "text-decoration: none" href = "thebestdistr.html"> Лучший дистрибутив </a> </li>
+						</ul>
+				</div>
+
+
+				<div class = "content">
+					<h3 id = "content-header">
+							Почему GNU/Linux? 
+					</h3>
+					<p id = "paragraph-head"> Введение </p>
+					<hr style = "margin-left: 30px; margin-right: 38px;">
+					<p id = "content-text"> 
+						В повседневной жизни люди иногда слышат разговоры, о какой-то операционной системе Linux и просто не вдаются в подробности. 
+						Что это такое и как она работает? Где применяется? Чаще всего многие просто не интересуются и воспринимают ее 
+						как отдельную ОС, которая зачем-то там нужна. Поэтому в данной теме я хочу рассказать тем, кто еще не до конца понял, что такое Linux. 
+						И почему вообще не Линукс, а ГНУ/Линукс?
+						<img src="../img/gnulinuxforcontent.png"style = "width: 30%;
+								  height: 30%; margin: 40px 30px 0 15px; float: right">
+					</p>	
+						</br>
+					<p id = "paragraph-head"> Термины </p>
+					<hr style = "margin-left: 30px; margin-right: 2px;">
+					<p id = "content-text"> 
+						<i>Ядро</i> - это своего рода интерфейс между программами в операционной системе и устройствами компьютера (ОЗУ, ПЗУ, ЦП и т.д). 
+						Также оно предоставляет доступ исполняемым процессам соответствующих программ к ресурсам. Но задачи могут отличаться от самой архитектуры ядра. 
+						В данном случае мы рассматриваем монолитное ядро. 
+					</br>
+					</br>	
+						<i>Монолитное ядро</i> – означает, что все компоненты в ядре являются составными частями одной программы, 
+						используют общие данные и взаимодействуют друг с другом путём системных вызовов. 
+					</br>	
+					</br>
+						<i>OS (operation system или просто операционка)</i> – это собственно тоже некий интерфейс, только уже между пользователем (пользователями) и программами. 
+					</br>
+					</br>	
+						<i>Linux</i> - это ядро операционной системы GNU/Linux, которая соответствует стандартам <a class = "tooltip"> POSIX <span class = "tooltiptext"> Набор 
+						стандартов описывающих интерфейсы между операционной системой и прикладной программой</span></a>. Она поддерживает: <a class = "tooltip"> многозадачность, 
+						<span class = "tooltiptext"> обеспечение параллельной обработки нескольких задач </span> </a> <a class = "tooltip"> виртуальную память <span class = "tooltiptext"> 
+						метод, который позволяет давать ресурсы выполняющимся программам, которые требуют больше оперативной памяти, путем перемещения некоторого пространства, к примеру из 
+						жесткого диска</span></a>, динамические библиотеки, отложенную загрузку, производительную систему управления памятью и многие сетевые протоколы. 
+					</br>	
+					</br>	
+						<i>GNU/Linux</i> – это уже сама операционная система. Т.е сначала идет ядро Linux, а затем идут уже остальные компоненты, созданные проектом <a style = "color: #30b2f9; 
+						text-decoration: none" href = "https://ru.wikipedia.org/wiki/GNU"> GNU </a>. Эти компоненты представляют из себя утилиты для работы в среде. 
+					</p>
+					<img src="../img/gnu.png"style = "width: 30%;
+								  height: 10%; margin: 20px 50px 0 15px; float: right">
+						</br>
+					<p id = "paragraph-head"> Предыстория </p>
+					<hr style = "margin-left: 30px; margin-right: 3px;">	
+					<p id = "content-text"> 
+						Все началось с того, что в 70-е года начали появляться закрытые системы и ужасные лицензии на проприетарное программное обеспечение. 
+						И многим программистам (<a class = "tooltip"> хакерам <span class = "tooltiptext"> <b> Хакерство это </b> деятельность связанная с технической компетентностью и удовольствием, получаемым от решения проблем
+						и преодоления преград </span> </a>) это не понравилось. Им хотелось делиться кодом, изучать системы изнутри и распространять знания в интернете. 
+						Поэтому один из единомышленников, которого зовут <a style = "color: #30b2f9; text-decoration: none" href = "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D
+						0%BB%D0%BB%D0%BC%D0%B0%D0%BD,_%D0%A0%D0%B8%D1%87%D0%B0%D1%80%D0%B4_%D0%9C%D1%8D%D1%82%D1%82%D1%8C%D1%8E"> Ричард Мэтью Столлман </a> в 1983 году начал разрабатывать операционную систему GNU. 
+						Помимо основного ядра для этой ОС, были созданы утилиты для работы в ней и ее сборки, такие как gcc-компилятор, текстовый редактор Emacs и многие 
+						другие. Также появилась лицензия <a style = "color: #30b2f9; text-decoration: none" href = "https://ru.wikipedia.org/wiki/GNU_General_Public_License">
+						GNU General Public License </a>, которая позволяла распростронять исходный код в открытом виде и помимо этого при 
+						использовании ПО с этой лицензией, патент автоматически переходил к другому человеку, таким образом нельзя было сделать продукт коммерческим. 
+						В течении 20 лет распростронялась идея создания свободного ПО.  Ричард не успел написать полноценную ОС, поскольку само движение за открытое 
+						ПО случайным образом используя софр от GNU и еще не готовое для реализации ядро Linux, которое создавалось <a style = "color: #30b2f9; text-decoration: none"
+						href = "https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D0%B2%D0%B0%D0%BB%D1%8C%D0%B4%D1%81,_%D0%9B%D0%B8%D0%BD%D1%83%D1%81"> Линусом Торвальдсом </a>, смогло сотворить 
+						операционную систему GNU/Linux.  
+					</p>	
+						</br>
+					<p id = "paragraph-head"> В настоящее время </p>	
+					<hr style = "margin-left: 30px; margin-right: 33px;">
+					<p id = "content-text"> 
+						Конечно сейчас система GNU/Linux более известна как Linux, но нельзя забывать, что не существуя ПО созданного Ричардом и свободным сообществом, 
+						не существовало бы ядро Linux. Также обычно операционную систему GNU/Linux называют операционкой на базе ядра Linux. 
+						В данный момент такая ОС очень сильно распространена на рынке серверов, и является вполне завершенной, но при этом до-сих-пор выпускаются свежие
+						обновления и она становится ещё лучше. Помимо этого в последнее время к GNU/Linux приходят ещё обычные Desktop-юзеры.
+						Жаль, пока-что их очень мало, но сообщество старается продвигать эту ОС и мотивировать людей использовать ее вместо коммерческих и проприетарных, 
+						по типу Windows или macOS. Но выбор остается за пользователем.
+					</p>
+						</br>						
+					<p id = "paragraph-head"> Вывод </p>
+					<hr style = "margin-left: 30px; margin-right: 73px;">
+					<p id = "content-text"> 
+						В конце хочется сказать, что весь проект <i>"</i> GNU это одна большая хакерская атака, это одна большая подрывная деятельность игривого и большого ума, 
+						с целью улучшения общества<i>"</i> . Ричард Столлман хотел и хочет до-сих-пор улучшать общество, но делать это по-умному и вместе с людьми, которые 
+						развивают движение за свободное ПО. 
+					</p>
+					 
+					
+				</div>
+				
+						
+				<div class = "clear"> </div>
+				
+						
+				<footer >  
+					<div style = "padding: 5px">
+						
+						<div id = "left-bottom-hyper">
+						<a href = "https://www.notabug.org/ZeroNe/MPKB">
+							<img id = "pict-notabug2"
+								 src = "../img/notabug-logo.png"> 
+						</a>
+						<a href = "mailto:nik.pavlov.9191@inbox.ru">
+							<img id = "pict-mail2"
+								src = "../img/mail-logo.png">
+							</a>
+						</div>	
+						
+						<p style = "font-family: FuturaRoundBold;
+									font-size: 12px;
+									margin: 4px 430px 0 430px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									border-radius: 15px; "> 
+						Автор сайта: Павлов Никита из гр. ИСП-932</p>
+						<p style = "font-family:FuturaRoundBold;
+									font-size: 12px;
+									margin: -23px 35px 0 980px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									color: #428bca;
+									border-radius: 15px; ">
+						Версия сайта: 0.4 </p>
+					</div>
+				</footer>
+					
+					
+			</div> </center> 
+     			
+     			
+		</body>
+		
+		
+</html>

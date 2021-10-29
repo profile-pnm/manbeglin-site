@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+	
+	
+     <head>
+	 	<title> ArchLinux </title>
+	 	<base href=".">
+	 	<meta charset = "UTF-8"/>
+     	<link rel = "stylesheet" type = "text/css" href = "../css/archLinuxInstall.css"/>
+     	<link href="../img/glider.ico" rel="icon" type="image/x-icon" />
+
+     </head>
+
+
+		<body>
+			<center> <div class = "container"> 
+				<header>
+						
+						<a href = "page-login.html" id = "button"> 
+						Войти </a>
+					
+					<div id = "header-banner">
+						<a href = "../main.html"> <img id = "logo" src="../img/logo-website.png"> </a>
+						<p id = "text-header"> Руководство для начинающиего 
+							<span style = "color: red; font-size: 25px;"> 
+							Линуксоида</span><span style = "color: #428bca; 
+							font-size: 20px">.org</span>  <!-- #08FF28 -->
+						</p>
+					</div>
+				</header>
+
+				<a href = "gnulinux.html" id = "button-prev"> Вернуться </a>
+				
+
+				<div class = "content">
+					<h3 id = "content-header">
+							Установка ArchLinux
+					</h3>
+					
+					
+					<p id = "paragraph-head"> Введение </p>
+					<hr style = "margin-left: 30px; margin-right: 40px;">
+					<p id = "content-text" style="margin: 5px 30px 5px 30px"> 
+						
+						Arch Linux это независимый дистрибутив GNU/Linux для опытных пользователей, 
+						оптимизированный для архитектуры x86-64, который стремится предоставить последние 
+						«новейшие» версии программ, следуя модели rolling release. По умолчанию пользователю 
+						предоставляется минималистичная базовая система, в которую пользователь может добавить 
+						то, что ему требуется. Для установки, удаления и обновления 
+						пакетов используется пакетный менеджер Pacman.
+						 
+						<img src="../img/arch-logo.png" style = "width: 25%;
+								  height: 30%; margin: 44px 13px 0 15px; 
+								  float: right; border-radius: 10px; border: 2px solid gray">
+						
+					</p>	
+						</br>
+					<p id = "paragraph-head"> 
+						Перед установкой
+					</p>
+
+
+					<hr style = "margin-left: 30px; margin-right: 2px;">
+					<p id = "content-text"> 
+						
+						Для того чтобы установить данный дистрибутив, вам потребуется перейти на данный
+						<a href="https://archlinux.org" style="color:aqua; text-decoration: none">сайт</a>.
+						И зайти в раздел скачиваний, а после выбрать образ. Скачать его и после сделать загрузочную
+						флешку. После перейти к основной установке.
+						<img src="../img/download-arch.png" style = "width: 60%;
+								  height: 30%; margin: 14px 13px 0 15px; 
+								  float: left; border-radius: 5px; border: 2px solid gray">
+						
+					</p>
+						</br> <br> <br> <br> <br> <br>
+					<p id = "paragraph-head"> Приступим к установке и настройке </p>
+					<hr style = "margin-left: 30px; margin-right: 3px;">	
+					<p id = "content-text"> 
+						1) Базовая часть <br> 
+						
+						<span style = "color: red">#</span> <b>cfdisk</b> </br>
+						 * (создаем два раздела <корень /> и <подкачку swap>) <br>
+						<span style = "color: red">#</span> <b>mkswap /dev/sdXx</b> </br>
+						<span style = "color: red">#</span> <b>swapon /dev/sdXx</b> </br>
+						<span style = "color: red">#</span> <b>mkfs.ext4 /dev/sdXx</b> </br>
+						<span style = "color: red">#</span> <b>mount /dev/sdXx /mnt</b> </br>
+						<span style = "color: red">#</span> <b>pacstrap /mnt base base-devel linux-firmware vim</b> </br>
+						<span style = "color: red">#</span> <b>genfstab -U /mnt >> /mnt/etc/fstab</b> </br>
+					</p>
+						
+					<p id="content-text">
+						2) Работа в системе <br>
+						<span style = "color: red">#</span> <b>arch-chroot /mnt</b> </br>
+						<span style = "color: red">#</span> <b>vim /etc/locale.gen</b> </br>
+						* (расскоментировать строку или строки) <br>
+						<span style = "color: red">#</span> <b>locale-gen</b> </br>
+						<span style = "color: red">#</span> <b>vim /etc/locale.conf</b> </br>
+						* (в созданный файл записать : LANG=ru.US.UTF-8) <br>
+						<span style = "color: red">#</span> <b>pacman -S grub nano networkmanager</b> </br>
+						<span style = "color: red">#</span> <b>grub-install /dev/sda</b> </br>
+						<span style = "color: red">#</span> <b>grub-mkconfig -o /boot/grub/grub.cfg</b> </br>
+						<span style = "color: red">#</span> <b>passwd root</b> </br>
+						* (устанавливаем пароль для пользователя root)
+						<span style = "color: red">#</span> <b>useradd -m -g users -G wheel -s /bin/bash <i>имя_пользователя</i></b> </br>
+						<span style = "color: red">#</span> <b>exit</b> </br>
+						<span style = "color: red">#</span> <b>umount -R /mnt</b> </br>
+						<span style = "color: red">#</span> <b>reboot</b> </br>
+					</p> </br>
+					
+					<p id="content-text">
+						3) Настройка <br>
+						<span style = "color: red">#</span> <b>systemctl enable NetworkManager</b> </br>
+						<span style = "color: red">#</span> <b>systemctl start NetworkManager</b> </br>
+						<span style = "color: red">#</span> <b>nmuti</b> </br>
+						* (подключаемся к сети)
+						<span style = "color: red">#</span> <b>ping -c 3 archlinux.org</b> </br>
+						<span style = "color: red">#</span> <b>pacman -S sudo</b> </br>
+						<span style = "color: red">#</span> <b>nano /etc/sudoers</b> </br>
+						* (расскоментировать <i>%wheel ALL=(ALL) ALL</i>
+						<span style = "color: red">#</span> <b>passwd <i>имя_пользователя</i></b> </br>
+					</p>
+
+				</div>
+				
+						
+				<div class = "clear"> </div>
+				
+						
+				<footer >  
+					<div style = "padding: 5px">
+						
+						<div id = "left-bottom-hyper">
+						<a href = "https://www.notabug.org/ZeroNe/MPKB">
+							<img id = "pict-notabug2"
+								 src = "../img/notabug-logo.png"> 
+						</a>
+						<a href = "mailto:nik.pavlov.9191@inbox.ru">
+							<img id = "pict-mail2"
+								src = "../img/mail-logo.png">
+							</a>
+						</div>
+							
+						<p style = "font-family: FuturaRoundBold;
+									font-size: 12px;
+									margin: 4px 430px 0 430px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									border-radius: 15px; "> 
+						Автор сайта: Павлов Никита из гр. ИСП-932</p>
+						<p style = "font-family:FuturaRoundBold;
+									font-size: 12px;
+									margin: -23px 35px 0 980px;
+									text-align: center;
+									background: white;
+									padding: 4px;
+									color: #428bca;
+									border-radius: 15px; ">
+						Версия сайта: 0.4 </p>
+					</div>
+				</footer>
+					
+					
+			</div> </center> 
+     			
+     			
+		</body>
+		
+		
+</html>
+
